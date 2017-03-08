@@ -11,11 +11,11 @@ var balls = [];
 const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"];
 
 window.onload = function () {
-    WINDOW_WIDTH = document.body.clientWidth -20;
+    WINDOW_WIDTH = document.body.clientWidth;
     WINDOW_HEIGHT = document.body.clientHeight -20;
-    MARGIN_LEFT = Math.round(WINDOW_WIDTH / 10);
-    RADIUS = Math.round(WINDOW_WIDTH *4 / 5 / 108) - 1;
+    MARGIN_LEFT = Math.round(WINDOW_WIDTH / 20);
     MARGIN_TOP = Math.round(WINDOW_HEIGHT / 5);
+    RADIUS = Math.round(WINDOW_WIDTH *9 / 10 / 107 - 1);
 
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
@@ -68,7 +68,6 @@ function update() {
         curShowTimeSeconds = nextShowTimeSeconds;
     }
     updateBalls();
-    console.log(balls.length);
 }
 function updateBalls() {
     for (var i = 0; i < balls.length; i++) {
